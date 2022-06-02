@@ -34,7 +34,3 @@ def output():
 
 path = 'events.txt'
 
-
-def test_output():
-    assert output() == 'It is 212 days until New Year\nIt is 214 days until Birthday\n'
-    return print('All tests from countdown_calendar.py passed successfully')

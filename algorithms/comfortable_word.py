@@ -17,6 +17,7 @@ Right: y, u, i, o, p, h, j, k, l, n, m
 
 def comfortable_word(word):
     right = ['y', 'u', 'i', 'o', 'p', 'h', 'j', 'k', 'l', 'n', 'm']
+
     return all((a in right) - (b in right) for a, b in zip(word, word[1:]))
 
 
