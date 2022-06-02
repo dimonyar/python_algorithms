@@ -18,5 +18,7 @@ def test_array_diff():
     assert array_diff([1, 2, 2], [1]) == [2, 2]
     assert array_diff([1, 2, 2], []) == [1, 2, 2]
     assert array_diff([], [1, 2]) == []
-    return print('All tests passed successfully')
+    return print('All tests from array_diff passed successfully')
+
+
 
