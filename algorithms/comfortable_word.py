@@ -1,21 +1,26 @@
-# A comfortable word is a word which you can type always alternating the hand you
-# type with (assuming you type using a QWERTY keyboard and use fingers as shown
-# in the image below).
 
-# That being said, complete the function which receives a word and returns true
-# if it's a comfortable word and false otherwise.
+"""
+A comfortable word is a word which you can type always alternating the hand you
+type with (assuming you type using a QWERTY keyboard).
 
-# The word will always be a string consisting of only ascii letters from a to z.
+That being said, complete the function which receives a word and returns true
+if it's a comfortable word and false otherwise.
 
-# To avoid problems with image availability, here's the lists of letters for each hand:
+The word will always be a string consisting of only ascii letters from a to z.
 
-# Left: q, w, e, r, t, a, s, d, f, g, z, x, c, v, b
-# Right: y, u, i, o, p, h, j, k, l, n, m
+To avoid problems with image availability, here's the lists of letters for each hand:
+
+Left: q, w, e, r, t, a, s, d, f, g, z, x, c, v, b
+Right: y, u, i, o, p, h, j, k, l, n, m
+"""
 
 
-right = ['y', 'u', 'i', 'o', 'p', 'h', 'j', 'k', 'l', 'n', 'm']
+def comfortable_word(word):
+    right = ['y', 'u', 'i', 'o', 'p', 'h', 'j', 'k', 'l', 'n', 'm']
+    return all((a in right) - (b in right) for a, b in zip(word, word[1:]))
 
-comfortable_word = lambda word: all((a in right) - (b in right) for a, b in zip(word, word[1:]))
 
-print(comfortable_word('yams'))
-print(comfortable_word('test'))
+def test_comfortable_word():
+    assert comfortable_word('yams') == True
+    assert comfortable_word('test') == False
+    return print('All tests from comfortable_word passed successfully')
