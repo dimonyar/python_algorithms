@@ -1,3 +1,12 @@
+
+'''
+Write a program that does:
+1. Reads events from file events.txt
+Each event is on a new line and formatted as next: "New Year,31.12.21"
+2. For every event calculates number of days until the event and outputs:
+"It is 86 days until New Year"
+'''
+
 from datetime import date, datetime
 
 
@@ -25,4 +34,7 @@ def output():
 
 path = 'events.txt'
 
-print(output())
+
+def test_output():
+    assert output() == 'It is 212 days until New Year\nIt is 214 days until Birthday\n'
+    return print('All tests from countdown_calendar.py passed successfully')

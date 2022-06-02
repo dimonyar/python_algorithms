@@ -16,5 +16,9 @@ connotation = lambda strng: sum(strng < 'n' for strng in strng.lower().split()) 
                             sum(strng > 'n' for strng in strng.lower().split())
 
 
-print(connotation('All FOoD tAsTEs NIcE for someONe'))
-print(connotation('Xylophones can obtain Xenon.'))
+def test_connotation():
+    result = connotation('All FOoD tAsTEs NIcE for someONe')
+    assert result is True, f'Wrong result {result}'
+    result = connotation('Xylophones can obtain Xenon.')
+    assert result is False, f'Wrong result {result}'
+    return print('All tests from connotation passed successfully')
