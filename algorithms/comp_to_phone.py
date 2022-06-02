@@ -20,10 +20,11 @@ Solve the horror of unstandartized keypads by providing a function that converts
 Notes:
 You get a string with numbers only"""
 
+computer_to_phone = lambda numbers: numbers.translate(str.maketrans('123789', '789123'))
 
-computer_to_phone = lambda s: s.translate(str.maketrans('123789', '789123'))
 
-
-print(computer_to_phone("0789456123") == "0123456789")
-print(computer_to_phone("000") == "000")
-print(computer_to_phone("94561") == "34567")
+def test_computer_to_phone():
+    assert computer_to_phone("0789456123") == "0123456789"
+    assert computer_to_phone("000") == "000"
+    assert computer_to_phone("94561") == "34567"
+    return print('All tests from computer_to_phone passed successfully')
