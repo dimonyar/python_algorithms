@@ -23,8 +23,12 @@ def decrypt(encrypted_text, n):
     for i in range(n):
         encrypted_text1 = ''
         for i in range(0, int(len(encrypted_text) / 2)):
-            encrypted_text1 += (encrypted_text[int(len(encrypted_text) / 2):])[i]
-            encrypted_text1 += (encrypted_text[:int(len(encrypted_text) / 2)])[i]
+            encrypted_text1 += (
+                encrypted_text[int(len(encrypted_text) / 2):]
+            )[i]
+            encrypted_text1 += (
+                encrypted_text[:int(len(encrypted_text) / 2)]
+            )[i]
         if len(encrypted_text) % 2 != 0:
             encrypted_text1 += encrypted_text[-1]
         encrypted_text = encrypted_text1

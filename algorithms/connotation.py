@@ -11,9 +11,9 @@
 # "A big brown fox caught a bad rabbit" => True/true
 # "Xylophones can obtain Xenon." => False/false
 
-
-connotation = lambda strng: sum(strng < 'n' for strng in strng.lower().split()) >= \
-                            sum(strng > 'n' for strng in strng.lower().split())
+def connotation(strng):
+    return sum(strng < 'n' for strng in strng.lower().split()) >= sum(
+        strng > 'n' for strng in strng.lower().split())
 
 
 def test_connotation():

@@ -1,4 +1,6 @@
-""" Create a function that takes a positive integer and returns the next bigger number that can be formed by rearranging its digits. For example:
+"""
+Create a function that takes a positive integer and returns the next bigger number
+that can be formed by rearranging its digits. For example:
 
             12 ==> 21
             513 ==> 531
@@ -13,7 +15,9 @@ If the digits can't be rearranged to form a bigger number, return -1 (or nil in 
             531 ==> -1
             nextBigger(num: 9)   // returns nil
             nextBigger(num: 111) // returns nil
-            nextBigger(num: 531) // returns nil """
+            nextBigger(num: 531) // returns nil
+"""
+
 
 def next_bigger(n):
     lst = [i for i in str(n)]

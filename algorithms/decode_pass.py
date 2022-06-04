@@ -10,7 +10,8 @@
 # 01100100 00110001 00110010 00110011');    => False
 
 
-decode_pass = lambda pass_list, bits: (pas := ''.join(map(lambda x: chr(int(x, 2)), bits.split()))) in pass_list and pas
+def decode_pass(pass_list, bits):
+    return (pas := ''.join(map(lambda x: chr(int(x, 2)), bits.split()))) in pass_list and pas
 
 
 print(decode_pass(['password123', 'admin', 'admin1'],

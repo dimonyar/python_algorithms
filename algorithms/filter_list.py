@@ -8,8 +8,8 @@
 # filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 
 
-def filter_list(l):
-    return [i for i in l if type(i) == int]
+def filter_list(lst):
+    return [i for i in lst if type(i) == int]
 
 
 print(filter_list([1, 2, 'a', 'b']) == [1, 2])

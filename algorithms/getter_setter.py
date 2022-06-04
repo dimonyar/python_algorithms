@@ -12,7 +12,7 @@ class Player:
 
     @property
     def lvl(self):
-        return self.__lvl
+        return self.__lvl, f'{dt.now()-self.__created}'
 
     @lvl.setter
     def lvl(self, numeric):

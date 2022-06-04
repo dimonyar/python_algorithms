@@ -22,6 +22,6 @@ def comfortable_word(word):
 
 
 def test_comfortable_word():
-    assert comfortable_word('yams') == True
-    assert comfortable_word('test') == False
+    assert comfortable_word('yams') is True
+    assert comfortable_word('test') is False
     return print('All tests from comfortable_word passed successfully')

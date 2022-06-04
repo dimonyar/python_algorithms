@@ -33,4 +33,3 @@ def output():
 
 
 path = 'events.txt'
-

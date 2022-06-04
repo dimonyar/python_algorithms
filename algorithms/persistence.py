@@ -14,13 +14,13 @@
 
 
 def persistence(n):
-    l = [int(i) for i in str(n)]
+    lst = [int(i) for i in str(n)]
     mult = 0
-    while len(l) >= 2:
+    while len(lst) >= 2:
         n = 1
-        for i in l:
+        for i in lst:
             n *= i
-        l = [int(i) for i in str(n)]
+        lst = [int(i) for i in str(n)]
         mult += 1
     return mult
 

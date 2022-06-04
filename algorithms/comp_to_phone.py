@@ -8,11 +8,12 @@ Computer keypad's layout:
 
 Cell phone keypad's layout:
             1 2 3
-            4 5 6 
-            7 8 9  
+            4 5 6
+            7 8 9
               0
 
-Solve the horror of unstandartized keypads by providing a function that converts computer input to a number as if it was typed by a phone.
+Solve the horror of unstandartized keypads by providing a function that converts computer input to a number
+if it was typed by a phone.
 
             Example:
             "789" -> "123"
@@ -20,7 +21,9 @@ Solve the horror of unstandartized keypads by providing a function that converts
 Notes:
 You get a string with numbers only"""
 
-computer_to_phone = lambda numbers: numbers.translate(str.maketrans('123789', '789123'))
+
+def computer_to_phone(numbers):
+    return numbers.translate(str.maketrans('123789', '789123'))
 
 
 def test_computer_to_phone():
